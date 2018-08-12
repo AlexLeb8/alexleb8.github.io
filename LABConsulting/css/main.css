@@ -1,0 +1,1357 @@
+/* ------ Спецификация ------ */
+
+@font-face {
+    font-family: 'Museo Sans 100';
+    src: url('../fonts/MuseoSansCyrl-100.eot');
+    src: url('../fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-100.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-100.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-100.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-100.svg#MuseoSansCyrl-100') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans 300';
+    src: url('../fonts/MuseoSansCyrl-300.eot');
+    src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-300') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo Sans 700';
+    src: url('../fonts/MuseoSansCyrl-700.eot');
+    src: url('../fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MuseoSansCyrl-700.woff2') format('woff2'),
+        url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+        url('../fonts/MuseoSansCyrl-700.ttf') format('truetype'),
+        url('../fonts/MuseoSansCyrl-700.svg#MuseoSansCyrl-700') format('svg');
+}
+
+body {
+	font-family: 'Museo Sans 300', sans-serif;
+	color: #404048;
+	letter-spacing: 0em;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+
+p {
+    line-height: 1.25em;
+    margin-bottom: 1em;
+    letter-spacing: 0.02em;
+}
+
+ul, li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Museo Sans 700';
+	color: #081d42;
+	line-height: 1.6em;
+}
+
+h1 {
+	font-size: 58px;
+}
+
+h2 {
+	font-size: 29px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 23px;
+}
+
+h5 {
+	font-size: 21px;
+}
+
+h6 {
+	font-size: 19px;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+}
+
+a, button, input {
+	transition: all 0.5s ease;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+
+ {
+	outline: none;
+}
+
+.container-fluid_plain {
+	padding: 0;
+}
+
+.btn {
+	font-family: 'Museo Sans 700';
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+	background-color: #1cb883;
+	display: block;
+	border-radius: 0;
+	border-bottom: 4px solid #149d6f;
+	padding: 8px 0;
+	width: 155px;
+}
+
+.btn:hover {
+	background-color: #17b17d;
+	color: #fff;
+}
+
+.btn:active {
+	margin-top: -6px;
+	border-bottom: 0px solid #149d6f;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
+
+/* ------ HOME Page ------ */
+/* ------ Header ------ */
+
+.home-header {
+	background: #a5c6ff url(../img/bg-header.jpg) center center / cover;
+	box-shadow: inset 0 2000px rgba(165, 198, 255, 0.47);
+}
+
+.home-header::after {
+	content: '';
+	display: block;
+	bottom: 0;
+	border-bottom: 15px solid rgba(255,255,255,0.15);
+}
+
+.menu-bg {
+	background-color: rgba(191, 194, 200, 0.41);
+	padding-top: 22px;
+	padding-bottom: 11px;
+	position: relative;
+	transform: translateX(-50%);
+	margin-left: 50%;
+	max-width: 90vw;
+	min-width: 100%;
+}
+
+.menu-bg::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-color: #58647a;
+}
+
+.menu-bg::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: rgba(88, 100, 122, 0.1);
+}
+
+.logo {
+	position: relative;
+}
+
+.top-menu {
+	margin-left: 10px;
+	margin-top: -11px;
+}
+
+.top-menu__link {
+	font-family: 'Museo Sans 700';
+	font-size: 17px;
+	color: #3f4b60;
+	background-color: transparent;
+	margin-left: 9px;
+	margin-right: 16px;
+}
+
+.top-menu__link_hover {
+	border-bottom: 1px solid #3F4B60;
+	color: #b81c31;
+}
+
+.top-menu__link:hover {
+	border-bottom: 1px solid #3F4B60;
+	transition: all 0s;
+	color: #b81c31;
+}
+
+.top-menu-opened {
+	background: rgba(130,139,155,0.9);
+	border-radius: 5px;
+	padding: 20px;
+	flex-direction: column;
+	width: 100%;
+	z-index: 9999;
+	box-shadow: 0 0 40px rgba(130,139,155,0.75); 
+	margin: 0;
+	margin-top: 20px;
+}
+
+.top-menu-opened .top-menu__link {
+	color: #fff;
+	font-size: 15px;
+	padding: 15px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.6);
+	display: block;
+	text-align: center;
+}
+
+.top-menu-opened .top-menu__link:hover {
+	text-decoration: underline;
+	color: #b81c31;
+}
+
+.btn__order-call i {
+	color: #46e6b0;
+	margin-right: 5px;
+}
+
+.btn__order-call {
+	margin-top: -10px;
+	margin-left: 15px;
+}
+
+.reg {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 13px 98px rgba(0, 0, 0, 0.24);
+	padding: 37px 33px 23px;
+}
+
+.reg_margin {
+	margin-right: 28px;
+}
+
+.reg__title {
+	text-align: center;
+	margin-bottom: 15px;
+	letter-spacing: 0.06em;
+}
+
+.reg__text {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 25px;
+	letter-spacing: 0.03em;
+	width: 215px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.reg .form {
+	flex-direction: column;
+}
+
+.reg .form input {
+	border: 0;
+	border-bottom: 1px solid #bababa;
+	width: 268px;
+	font-size: 13px;
+	color: #1b3bde;
+	margin-bottom: 15px;
+	padding: 10px 0;
+	letter-spacing: 0.03em;
+}
+
+.reg  .form ::placeholder {
+	color: #acacac;
+}
+
+input[placeholder]:hover, input[placeholder]:focus {
+	border-bottom: 1px solid black;
+}
+
+input:hover::placeholder, input:focus::placeholder {
+	color: #000;
+	font-weight: 700;
+}
+
+.reg .form button {
+	font-size: 16px;
+	font-weight: 700;
+	width: 270px;
+	border: 0;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #b81c31;
+	padding: 21px 0;
+	margin-top: 5px;
+    margin-bottom: 14px;
+	cursor: pointer;
+}
+
+.reg .form button:hover {
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.reg .form button:active {
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5) inset;
+}
+
+.top-menu__burger {
+	font-size: 27px;
+	color: rgb(16, 46, 98);
+}
+
+.present {
+	margin-top: 80px;
+	margin-bottom: -95px;
+}
+
+.present__title {
+	text-transform: none;
+	margin-bottom: 1px;
+}
+
+.present__text {
+	font-family: "Museo Sans 300";
+	font-size: 29px;
+	width: 470px;
+	line-height: 1.23em;
+	margin-bottom: 28px;
+}
+
+.present__icons {
+	width: 166px;
+	padding: 8px;
+	background-color: rgba(255,255,255,0.82);
+	box-shadow: 0 0 0 3px rgba(255,255,255,0.66);
+	border-radius: 3px;
+	margin-bottom: 232px;
+	margin-left: 5px;
+}
+
+.present__link {
+	width: 30px;
+	height: 30px;
+	font-size: 17px;
+	text-align: center;
+	line-height: 26px;
+	border: 2px solid;
+}
+
+.present__link:hover {
+	box-shadow: 0 0 8px 1px;
+}
+
+.fa-facebook {
+	color: #23599c;
+	border-color: #23599c;
+}
+
+.fa-twitter {
+	color: #17c0ff;
+	border-color: #17c0ff;
+}
+
+.fa-telegram-plane {
+	color: #25a3d4;
+	border-color: #25a3d4;
+}
+
+/* ------ Trust ------ */
+
+.trust {
+	background-color: #f1f1f3;
+	padding-top: 47px;
+	padding-bottom: 87px;
+}
+
+.merit__icon {
+	width: 119px;
+	height: 119px;
+	border-radius: 50%;
+	background-color: #c8cbdb;
+	margin: 0 auto;
+	font-size: 50px;
+	color: #b81c31;
+	margin-top: 27px;
+	margin-bottom: 17px;
+}
+
+.btn__info {
+	font-size: 16px;
+	margin-top: 62px;
+	padding: 10px 0;
+	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn__info:active {
+	margin-top: 66px;
+}
+
+/* ------ Legal ------ */
+
+.legal {
+	padding-top: 103px;
+	padding-bottom: 64px;
+}
+
+.idea__icon {
+	width: 86px;
+	height: 86px;
+	border-radius: 50%;
+	background-color: #102e62;
+	color: #fff;
+	font-family: "Museo Sans 100";
+	font-size: 50px;
+	margin: 0 auto;
+}
+
+.idea__title span {
+	color: #b81c31;
+}
+
+.idea__title {
+	font-family: "Museo Sans 100";
+	font-size: 24px;
+	letter-spacing: 0em;
+	margin-top: 2px;
+	margin-left: 7px;
+	margin-bottom: 7px;
+}
+
+.idea__text {
+	letter-spacing: 0.014em;
+	line-height: 1.22em;
+}
+
+/* ------ Info ------ */
+
+.current {
+	background: #616c81 url(../img/bg-info.jpg) no-repeat center top / cover;
+	padding-top: 34px;
+	padding-bottom: 23px;
+}
+
+.mission__title {
+	color: rgba(255,255,255,0.4);
+	margin-bottom: 20px;
+}
+
+.mission__title::after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 100%;
+	border-radius: 1px;
+	background-color: rgba(255, 255, 255, 0.1); 
+	margin-top: 6px;
+} 
+
+.mission__first-column {
+	margin-right: 16px;
+}
+
+.mission__text {
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.67);
+	letter-spacing: 0em;
+	margin-bottom: 18px;
+}
+
+.news__title {
+	color: rgba(255,255,255,0.4);
+	margin-bottom: 23px;
+}
+
+.news__title::after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 100%;
+	border-radius: 1px;
+	background-color: rgba(255, 255, 255, 0.1); 
+	margin-top: 6px;
+} 
+
+.news__item {
+	position: relative;
+	padding-bottom: 11px;
+	margin-bottom: 20px;
+}
+
+.news__item::after {
+	position: absolute;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.news__img {
+	margin-right: 13px;
+}
+
+.news__text {
+	font-family: "Museo Sans 700";
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.75);
+	line-height: 1.2em;
+	letter-spacing: 0em;
+	margin-top: -3px;
+	margin-bottom: 6px;
+	display: block;
+}
+
+.news__text:hover {
+	color: #fff;
+}
+
+.news__date {
+	font-family: "Museo Sans 100";
+	font-size: 10px;
+	color: rgba(255, 255, 255, 0.43);
+	margin-left: 3px;
+}
+
+.btn__more {
+	margin-top: 24px;
+	width: 173px;
+	border: 2px solid rgba(255, 255, 255, 0.69);
+	font-size: 16px;
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.72);
+	margin-left: 2px;
+}
+
+.btn__more:hover {
+	background-color: rgba(255, 255, 255, 0.72);
+	color: #616c81;
+	border: 2px solid rgba(255, 255, 255, 0.0);
+}
+
+.btn__more:active {
+	box-shadow: inset 0 0 5px 5px rgba(0,0,0,0.2);
+}
+
+/* ------ Info ------ */
+
+.info {
+	background-color: #3a4456;
+	padding-top: 36px;
+}
+
+.info__item {
+	margin-bottom: 41px;
+}
+
+.info__title {
+	color: rgba(255, 255, 255, 0.66);
+	margin-bottom: 11px;
+}
+
+.info__link {
+	color: rgba(255, 255, 255, 0.46);
+}
+
+.info__link:hover {
+	color: #fff;
+}
+
+/* ------ Footer ------ */
+
+.footer {
+	background-color: #1f2531;
+}
+
+.footer::after {
+	content: '';
+	display: block;
+	height: 18px;
+	width: 100%;
+	background-color: #58647a;
+	margin-top: 34px;
+}
+
+.footer__logo {
+	margin-top: -10px;
+}
+
+.footer__text {
+	font-family: "Museo Sans 100";
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.52);
+	margin-bottom: 10px;
+	letter-spacing: 0em;
+}
+
+.footer__text_small {
+	font-size: 10px;
+	letter-spacing: 0.03em;
+}
+
+.footer__text_bold {
+	font-family: "Museo Sans 700";
+}
+
+.footer__icon {
+	width: 25px;
+	height: 25px;
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.63);
+	border: 1px solid rgba(255, 255, 255, 0.63);
+	margin-right: 10px;
+	text-align: center;
+	line-height: 25px;
+}
+
+.footer__text_width {
+	width: 135px;
+	margin-top: -4px;
+	letter-spacing: 0.01em;
+}
+
+.footer__first-column {
+	margin-top: 37px;
+	margin-left: 4px;
+}
+
+.footer__second-column {
+	margin-top: 40px;
+}
+
+.footer__developer {
+	margin-bottom: 13px;
+}
+
+.footer__developer:hover .footer__text {
+	color: #fff;
+}
+
+.footer__developer:hover .footer__icon {
+	color: #fff;
+	box-shadow: 0 0 3px 1px;
+}
+
+.footer__link {
+	color: rgba(255, 255, 255, 0.52);
+	text-decoration: underline;
+}
+
+.footer__link:hover {
+	color: #fff;
+}
+
+.btn__footer {
+	margin-top: 30px;
+	margin-left: 15px;
+}
+
+.btn__footer .fas {
+	color: #46e6b0;
+}
+
+.btn__footer:active {
+	margin-top: 34px;
+}
+
+/* ------ ABOUT Page ------ */
+/* ------ Header ------ */
+
+.header {
+	background-color: #F1F1F3;
+}
+
+.shell {
+	padding-top: 56px;
+	padding-bottom: 50px;
+}
+
+.shell_padding-about {
+	padding-bottom: 47px;
+}
+
+.shell__title {
+	font-size: 38px;
+	letter-spacing: -0.01em;
+	margin-bottom: 0;
+}
+
+.breadcramb__list {
+	padding-left: 0;
+}
+
+.breadcramb__link {
+	font-family: "Museo Sans 300";
+	font-size: 16px;
+	color: #7e838d;
+}
+
+.breadcramb__link:hover {
+	color: #7e838d;
+	text-decoration: underline;
+}
+
+.breadcramb__arrow {
+	margin: 0 3px;
+	color: #7e838d;
+}
+
+.shell-menu {
+	margin-top: 6px;
+}
+
+.shell-menu_margin-services {
+	margin-right: 13px;
+}
+
+.shell-menu__item {
+	margin-top: -5px;
+}
+
+.shell-menu__item_margin-services {
+	margin-left: 14px;
+}
+
+.shell-menu__link {
+	font-family: "Museo Sans 700";
+	font-size: 16px;
+	color: #a1a6af;
+	display: block;
+	padding: 10px 15px;
+	border: 2px solid transparent;
+}
+
+.shell-menu__link:hover {
+	color: #b81c31;
+	border: 2px solid #b81c31;
+	transition: 0.5s;
+}
+
+.shell-menu__link span {
+	font-family: "Museo Sans 300";
+	font-size: 13px;
+	display: block;
+	margin-top: -4px;
+}
+
+.shell-menu__link_hover {
+	border: 2px solid #b81c31;
+	color: #b81c31;
+}
+
+/* ------ ABOUT Page ------ */
+/* ------ Agvantage ------ */
+
+.agvantage {
+	padding-top: 50px;
+}
+
+.advantage__title {
+	letter-spacing: 0.02em;
+	margin-bottom: 20px;
+}
+
+.agvantage__text {
+	font-size: 15px;
+	color: #404048;
+	letter-spacing: 0.02em;
+	line-height: 1.3em;
+}
+
+.agvantage__border {
+	width: 100%;
+	height: 2px;
+	background-color: #e5e6e8;
+	margin-top: 50px;
+}
+
+/* ------ ABOUT Page ------ */
+/* ------ Agvantage-list ------ */
+
+.agvantage-list {
+	padding-top: 34px;
+}
+
+.agvantage-list__icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #102e62;
+	margin-top: 5px;
+}
+
+.agvantage-list__title {
+	font-family: "Museo Sans 700";
+	font-size: 18px;
+	letter-spacing: 0.03em;
+	margin-bottom: 11px;
+}
+
+.agvantage-list__text {
+	letter-spacing: 0.02em;
+	line-height: 1.3em;
+}
+
+.agvantage-list__border {
+	width: 80%;
+	height: 2px;
+	left: 0;
+	background-color: #e5e6e8;
+	margin-top: 30px;
+	margin-bottom: 32px;
+}
+
+/* ------ ABOUT Page ------ */
+/* ------ Gallery-power ------ */
+
+.gallery-power {
+	padding-top: 10px;
+	padding-bottom: 72px;
+}
+
+.gallery-power__title {
+	margin-bottom: 40px;
+	letter-spacing: 0.02em;
+	margin-bottom: 33px;
+}
+
+.gallery-power__image {
+	position: relative;
+	max-width: 269px;
+}
+
+.gallery-power__image:hover .gallery-power__overlay {
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.gallery-power__overlay {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	box-shadow: inset 0 300px rgba(58, 68, 86, 0.69);
+	border: 7px solid #9a97a7;
+}
+
+.gallery-power__icon {
+	font-size: 29px;
+	color: #fff;
+}
+
+.fa-expand-alt {
+		display: block;
+	}
+	.fa-expand {
+		display: none;
+	}
+
+/* ------ SERVICES Page ------ */
+/* ------ Legal ------ */
+
+.services__legal {
+	background: #434b65 url(../img/service-bg.jpg) no-repeat center top / cover;
+	padding-top: 42px;
+	padding-bottom: 39px;
+}
+
+.legal__img {
+	max-width: 207px;
+	margin: 0 auto;
+}
+
+.legal__title {
+	font-size: 25px;
+	color: #fff;
+	line-height: 1em;
+	letter-spacing: 0.01em;
+	margin-bottom: 20px;
+}
+
+.legal__text {
+	font-size: 15px;
+	color: #fff;
+	width: 335px;
+}
+
+.legal__list {
+	border: 1px solid rgba(255, 255, 255, 0.48);
+	border-radius: 5px;
+	padding: 13px 50px 16px 30px;
+}
+
+.legal__link {
+	font-size: 15px;
+	color: #fff;
+	line-height: 2.2em;
+	letter-spacing: 0.04em;
+}
+
+.legal__link:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+/* ------ SERVICES Page ------ */
+/* ------ Legal-subcategory ------ */
+
+.legal-subcategory__title {
+	font-size: 29px;
+	margin-top: 50px;
+	letter-spacing: 0.02em;
+	margin-bottom: 18px;
+}
+
+.legal-subcategory__text {
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-bottom: 18px;
+}
+
+.consultation {
+	border: 1px solid rgba(0,0,0, 0.17);
+	border-radius: 5px;
+	padding: 22px 30px 30px;
+	width: 470px;
+	margin-top: 38px;
+	position: relative;
+}
+
+.consultation__title {
+	font-family: "Museo Sans 700";
+	font-size: 16px;
+	letter-spacing: 0.02em;
+	color: #414449;
+}
+
+.consultation__btn {
+	border: 2px solid #b81c31;
+	padding: 8px 21px;
+	border-radius: 3px;
+	font-family: "Museo Sans 700";
+	cursor: pointer;
+	color: #b81c31;
+	margin: 13px 0;
+}
+
+.consultation__btn:hover {
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.consultation__btn:active {
+	color: #fff;
+	background-color: #b81c31;
+	transition: 0.5s;
+}
+
+.consultation__tel {
+	font-family: "Museo Sans 700";
+	font-size: 14px;
+	letter-spacing: 0.02em;
+	color: #585f6b;
+	margin-left: 19px;
+}
+
+.consultation__text {
+	font-size: 12px;
+	width: 230px;
+	line-height: 1.3em;
+	letter-spacing: 0.02em;
+}
+
+.consultation__img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+.navigation {
+	background-color: #fafafb;
+	padding: 0 25px;
+	padding-top: 45px;
+}
+
+.navigation__title {
+	font-size: 18px;
+	color: rgba(85, 102, 119, 0.68);
+}
+
+.navigation__title::after {
+	content: '';
+	display: block;
+	width: 115%;
+	height: 1px;
+	background-color: #dfdfe8;
+	margin-left: -25px;
+	margin-top: 40px;
+}
+
+.navigation__item .fas {
+	color: #aeaeb9;
+}
+
+.navigation__item::after {
+	content: '';
+	display: block;
+	width: 115%;
+	height: 1px;
+	background-color: #dfdfe8;
+	margin-top: 6px;
+	margin-left: -25px;
+}
+
+.navigation__wrapper {
+	margin-top: 16px;
+}
+
+.navigation__link {
+	font-family: "Museo Sans 700";
+	font-size: 15px;
+	letter-spacing: 0.02em;
+	color: #747487;
+	width: 190px;
+	margin-top: -4px;
+	margin-left: 17px;
+}
+
+.navigation__link:hover {
+	color: #747487;
+	text-decoration: underline;
+}
+
+.review {
+	background-color: #fafafb;
+	padding: 0 25px;
+	padding-bottom: 110px;
+}
+
+.review__title {
+	font-size: 18px;
+	color: rgba(85, 102, 119, 0.68);
+	text-align: left;
+	padding-top: 55px;
+	margin-bottom: 32px;
+}
+
+.review__gallery {
+	width: 306px;
+	margin: 0 auto;
+}
+
+.review__gallery img {
+	margin: 0 auto;
+}
+
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+.slick-prev, .slick-next {
+	font-size: 27px;
+	color: #747487;
+	margin-top: -14px;
+	z-index: 999;
+}
+
+.slick-prev {
+	left: 0px;
+}
+
+.slick-next {
+	right: 0px;
+}
+
+.slick-prev:hover, .slick-next:hover,
+.slick-prev:focus, .slick-next:focus
+{
+	color: #007bff !important;
+}
+
+.slick-dots {
+	bottom: -40px;
+}
+
+.slick-dots li {
+	width: 11px;
+	height: 11px;
+	margin: 0 11px;
+}
+
+.slick-dots li button:before {
+	content: '';
+	width: 11px;
+	height: 11px;
+	background-color: #bdc5d6;
+	opacity: .55;
+}
+
+.slick-dots li.slick-active button:before {
+	background-color: #8b9ab7;
+}
+
+
+
+
+.review__name {
+	font-family: "Museo Sans 700";
+	font-size: 15px;
+	letter-spacing: 0.02em;
+	color: #747487;
+	margin-top: 15px;
+	margin-bottom: 11px;
+}
+
+.review__text {
+	font-size: 13px;
+	letter-spacing: 0.02em;
+	line-height: 1.3em;
+	color: #404048;
+	width: 285px;
+	margin: 0 auto;
+	margin-bottom: 12px;
+}
+
+.review__link a {
+	color: #747487;
+	margin-bottom: 15px;
+}
+
+.review__link a:hover {
+	color: #007bff;
+}
+
+.review__mark {
+	width: 70px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #bdc5d6;
+}
+
+.review__mark_current {
+	color: #8b9ab7;
+}
+
+/* ------ CONTACTS Page ------ */
+/* ------ Map ------ */
+
+.shell-menu_margin-contacts {
+	margin-right: 57px;
+}
+
+.contacts__shell {
+	width: 100%;
+	height: 443px;
+}
+
+.contacts__mymap {
+	/*position: absolute;*/
+	width: 100%;
+}
+
+.contacts__info {
+	background: rgba(130,139,155,0.75);
+	border-radius: 5px;
+	color: #fff;
+	width: 470px;
+	padding: 22px 37px 55px 30px;
+	margin-left: -13px;
+	margin-top: -84%;
+	position: relative;
+}
+
+.contacts__info::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 13px;
+	left: -25px;
+	border-right: 25px solid rgba(130,139,155,0.75);
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+}
+
+.contacts__info a {
+	color: #fff;
+}
+
+.contacts__info i {
+	color: #fff;
+}
+
+.contacts__head {
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.contacts__head::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.22);
+}
+
+.contacts__title {
+	color: #fff;
+	letter-spacing: 0.02em;
+}
+
+.contacts__link {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 26px;
+	border: 2px solid;
+	margin-left: 16px;
+}
+
+.contacts__link:hover {
+	box-shadow: 0 0 8px 1px;
+}
+
+.contacts__content {
+	margin-top: 45px;
+	margin-left: 10px;
+}
+
+.contacts__details {
+	padding-right: 19px;
+}
+
+.contacts__phone {
+	margin-bottom: 29px;
+}
+
+.contacts__phone a {
+	font-size: 16px;
+}
+
+.contacts__phone i {
+	font-size: 12px;
+	margin-left: -3px;
+	margin-right: 4px;
+}
+
+.contacts__address {
+	font-size: 16px;
+	margin-bottom: 9px;
+}
+
+.contacts__address i {
+	font-size: 11px;
+	margin-left: -3px;
+	margin-right: 4px;
+}
+
+.contacts__address p {
+	margin-top: -6px;
+	margin-left: 8px;
+	letter-spacing: 0em;
+	line-height: 1.2em;
+}
+
+.contacts__text {
+	font-size: 12px;
+	width: 180px;
+	line-height: 1.2em;
+	margin-bottom: 15px;
+}
+
+.contacts__email {
+	margin-left: 10px;
+}
+
+.contacts__email i {
+	font-size: 16px;
+	margin-right: 8px;
+}
+
+.contacts__email a {
+	letter-spacing: 0.07em;
+	margin-bottom: 0;
+}
+
+.contacts__email a:hover {
+	text-decoration: underline;
+}
+
+/* ------- Preloader -------- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.75); 
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
+/* -------- Modal Window -------- */
+
+.box-modal {
+    position: relative;
+    padding: 16px;
+    background: #fff;
+    color: #3c3c3c;
+    font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
+    border-radius: 6px;
+}
+.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
+.box-modal_close:hover { color: #666; }
+
+

@@ -1,0 +1,464 @@
+/* Media Queries */
+
+/* 1200 -  */
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+/* 992 - 1200 px */
+@media screen and (max-width: 1200px) {
+	.top-menu__link {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.btn__order-call {
+		margin-left: -15px;
+	}
+	.btn__footer {
+		margin-left: -15px;
+	}
+/* ----------- SERVICES Page ----------- */
+	.review {
+		padding-bottom: 170px;
+	}
+	.review__gallery {
+		width: auto;
+	}
+	.review__text {
+		width: auto;
+	}
+	.shell-menu_margin-services {
+		margin-right: auto;
+	}
+	.shell-menu__item_margin-services {
+		margin-left: auto;
+	}
+	.legal__list {
+		padding: 13px 13px 16px 30px;
+	}
+	.legal__link {
+		font-size: 13px;
+		letter-spacing: 0;
+	}
+	.slick-dots {
+		bottom: -40px;
+	}
+/* ----------- CONTACTS Page ----------- */
+	.contacts__info {
+		width: 500px;
+		margin-top: -74%;
+	}
+}
+
+/* 768 - 992 px */
+@media screen and (max-width: 991px) {
+	.container {
+		width: 724px;
+	}
+	.menu-bg {
+		padding-top: 32px;
+		padding-bottom: 20px;
+	}
+	.btn__order-call {
+		margin-top: auto;
+		margin-left: auto;
+	}
+	.btn:active {
+		margin-top: 4px;
+	}
+	.btn__info:active {
+		margin-top: 66px;
+	}
+	.merit__icon {
+		margin-top: 22px;
+	}
+	.legal {
+		padding-top: 91px;
+		padding-bottom: 30px;
+	}
+	.idea__text {
+		margin-bottom: 42px;
+	}
+	.news__item {
+		align-items: center;
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+	}
+	.news__item::after {
+		width: 100%;
+	}
+	.news__text {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.btn__more {
+		margin-top: 16px;
+		margin-bottom: 42px;
+	}
+	.current {
+		padding-bottom: 25px;
+	}
+	.info__item {
+		margin-bottom: 50px;
+	}
+	.footer__logo {
+		margin: 40px 0;
+	}
+	.footer__first-column {
+		margin-top: auto;
+	}
+	.footer__second-column {
+		margin-top: auto;
+	}
+	.footer::after {
+		margin-top: auto;
+	}
+/* ----------- ABOUT Page ----------- */
+	.shell-menu_margin-about {
+		margin-top: 37px;
+	}
+	.shell_padding-about {
+		padding-bottom: 90px;
+	}
+	.agvantage__border {
+		margin-top: 44px;
+	}
+	.agvantage-list__border {
+		width: 100%;
+		margin-top: 31px;
+	}
+	.gallery-power {
+		padding-bottom: 72px;
+	}
+	.fa-expand-alt {
+		display: none;
+	}
+	.fa-expand {
+		display: block;
+	}
+/* ----------- SERVICES Page ----------- */
+	.shell-menu_margin-services {
+		margin-top: 35px;
+	}
+	.shell_padding-services {
+		padding-bottom: 73px;
+	}
+	.legal__title {
+		width: 210px;
+	}
+	.legal__text {
+		width: auto;
+	}
+	.services__legal {
+		padding-top: 58px;
+		padding-bottom: 45px;
+	}
+	.legal-subcategory__text {
+		letter-spacing: -0.005em;
+	}
+	.consultation {
+		width: 100%;
+	}
+	.navigation {
+		padding-top: 90px;
+	}
+	.navigation__title::after {
+		width: 100%;
+		margin-left: auto;
+	}
+	.navigation__item::after {
+		width: 100%;
+		margin-left: auto;
+		margin-top: 9px;
+	}
+	.navigation__link {
+		width: auto;
+		margin-top: -5px;
+	}
+	.review {
+		padding-bottom: 73px;
+	}
+	.review__title {
+		padding-top: 32px;
+		margin-bottom: 70px;
+	}
+	.review__name {
+		text-align: center;
+	}
+	.review__text {
+		text-align: center;
+		margin-bottom: 15px;
+		width: 600px;
+	}
+	.review__link {
+		text-align: center;
+	}
+	.review__mark {
+		margin-top: 30px;
+	}
+	.slick-dots {
+		bottom: -40px;
+	}
+/* ----------- CONTACTS Page ----------- */
+	.contacts__info {
+		width: auto;
+		margin-left: auto;
+	}
+	.contacts__info::before {
+		display: none;
+	}
+	.contacts__info {
+		margin-top: 20px;
+		margin-bottom: 20px;	
+	}
+	.contacts__text {
+		width: 390px;
+	}
+	.shell-menu {
+		margin-top: 32px;
+		margin-bottom: 45px;
+	}
+	.shell-menu_margin-contacts {
+		margin-right: auto;
+	}
+	.contacts__info {
+		margin-bottom: 24px;
+	}
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 767px) {
+	h6 {
+		font-size: 17px;
+	}
+/* ----------- ABOUT Page ----------- */
+	.agvantage-list__icon {
+		margin-bottom: 15px;
+	}
+	.gallery-power__image {
+		margin-bottom: 20px;
+	}
+/* ----------- SERVICES Page ----------- */
+	.shell-menu__item_margin-services {
+		margin-left: auto;
+		margin-right: auto;
+		width: 230px;
+		text-align: center;
+	}
+	.review__text {
+		width: auto;
+	}
+	.slick-dots {
+		bottom: -40px;
+	}
+/* ----------- CONTACTS Page ----------- */
+	.contacts__text {
+		width: 180px;
+	}
+}
+
+/* 470 - 576 px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	.menu-bg {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.col-470-5 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 41.666667%;
+		flex: 0 0 41.666667%;
+		max-width: 41.666667%;
+	}
+	.present__text {
+		font-family: "Museo Sans 300";
+		font-size: 16px;
+		width: 100%;
+	}
+	.footer__logo {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.footer__developer {
+		margin-bottom: auto;
+	}
+	.footer__text {
+		margin-bottom: 30px;
+	}
+	.footer__button {
+		margin-bottom: 30px;
+	}
+	.btn__footer {
+		font-size: 11px;
+		padding: 9px 0;
+		width: 140px;
+		margin: 0 auto;
+	}
+	.btn__footer:active {
+		margin-top: 4px;
+	}
+
+/* ----------- ABOUT Page ----------- */
+	.shell-menu {
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	.shell-menu__item_width-about {
+		width: 155px;
+		text-align: center;
+	}
+	.agvantage__text {
+		margin-bottom: 20px;
+	}
+	.gallery-power__title {
+		font-size: 21px;
+	}
+	.gallery-power__image {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.menu-bg {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.shell-menu__item {
+		margin-bottom: 11px;
+	}
+	.shell_padding-about {
+		padding-bottom: 60px;
+	}
+	.agvantage__text {
+		line-height: 1.1em;
+	}
+	.agvantage-list {
+		padding-top: 26px;
+	}
+	.agvantage-list__icon {
+		margin-bottom: 20px;
+	}
+	.agvantage-list__text {
+		line-height: 1.1em;
+	}
+	.gallery-power {
+		padding-top: 30px;
+	}
+
+/* ----------- SERVICES Page ----------- */
+	.shell_padding-services {
+		padding-top: 65px;
+		padding-bottom: 69px;
+	}
+	.legal__title {
+		margin: 0 auto;
+		margin-top: 24px;
+		margin-bottom: 21px;
+	}
+	.legal__text {
+		text-align: center;
+		letter-spacing: 0em;
+	}
+	.services__legal {
+		padding-bottom: 35px;
+	}
+	.legal-subcategory__text {
+		letter-spacing: -0.03em;
+	}
+	.consultation {
+		text-align: center;
+	}
+	.consultation__text {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.consultation__btn {
+		width: 195px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.consultation__img {
+		display: none;
+	}
+	.navigation {
+		padding-top: 74px;
+	}
+	.navigation__link {
+		font-size: 14px;
+	}
+	.navigation__item::after {
+		margin-top: 10px;
+	}
+	.review__text {
+		letter-spacing: -0.02em;
+	}
+/* ----------- CONTACTS Page ----------- */
+	.menu-bg_padding-contacts {
+		padding-top: 34px;
+		padding-bottom: 34px;
+	}
+	.shell-menu_margin-contacts {
+		margin-top: 42px;
+		margin-bottom: 16px;
+	}
+	.breadcramb__link {
+		font-size: 15px;
+	}
+	.contacts__title {
+		text-align: center;
+	}
+	.contacts__icons {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.contacts__details {
+		margin-bottom: 20px;
+		padding-right: unset;
+	}
+	.contacts__content {
+		margin-top: 20px;
+	}
+	.contacts__text {
+		width: 100%;
+		letter-spacing: -0.02em;
+	}
+	.contacts__info {
+		padding: 22px 37px 22px 30px;
+	}
+	.contacts__email {
+		margin-left: 0;
+		font-size: 13.5px;
+	}
+	.contacts__link {
+		margin-left: 0;
+	}
+}
+
+/* 320 - 470 px */
+@media screen and (max-width: 470px) {
+	.col-470-d-none {
+		display: none;
+	}
+	.col-320-8 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 66.666667%;
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+	}
+	.home-header .col-1 {
+		margin-left: auto;
+		margin-right: 20px;
+	}
+	.slick-dots {
+		bottom: -40px;
+	}
+}
+
